@@ -1,0 +1,25 @@
+{
+  "name": "durobot",
+  "version": "1.0.0",
+  "description": "Meu bot no discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BryanWille/durobot.git"
+  },
+  "author": "Bryan Wille",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BryanWille/durobot/issues"
+  },
+  "homepage": "https://github.com/BryanWille/durobot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0"
+  }
+}
