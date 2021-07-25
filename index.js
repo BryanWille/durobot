@@ -1,28 +1,25 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
+const {prefix, token} = require("./config.json");
 
 const client = new Discord.Client();
 
-const prefix = "!";
-
-client.on("message", function(message) {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  const commandBody = message.content.slice(prefix.length);
-  const args = commandBody.split(' ');
-  const command = args.shift().toLowerCase();
-
-  if (command === "ping") {
-    const timeTaken = Date.now() - message.createdTimestamp;
-    message.reply(`Pong! o seu ping é ${timeTaken}ms.`);
+client.on('message', message =>{
+  const userName = message.author.username;
+  if(message.content.startsWith(`!play`)){
+    console.log(message.guild.voiceStates)
+    if(userName == 'ElliW'){
+      message.reply("Isso sim é música boa!");
+    } else if(userName == 'luan123'){
+      message.reply('**Vai por funk na pqp**');
+    } else if(userName == 'gomide17'){
+      message.reply('**Sério? não cansa de ouvir a poha dessa banda**');
+    } else {
+      message.reply('Puta música bosta');
+    }
+  } else if (message.content === `${prefix}servidor`){
+    message.reply(`Servidor **${message.guild.name}** criado em: ${message.guild.createdAt}`)
   }
+})
 
-  else if (command === "soma") {
-    const numArgs = args.map(x => parseFloat(x));
-    const sum = numArgs.reduce((counter, x) => counter += x);
-    message.reply(`A soma dos seus números foi: ${sum}!`);
-  }
-});
+client.login(token);
 
-client.login(config.BOT_TOKEN);

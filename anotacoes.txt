@@ -1,6 +1,19 @@
 Documentação discord.js = https://discordjs.guide/
+Lista de metódos servidor = https://discord.js.org/#/docs/main/stable/class/Guild
 
 Regras pra colocar no eslint = https://eslint.org/docs/rules/
 
 Regras do eslint são regras que colocamos para melhorar no código, ou seja como o editor de texto não passa esses erros, vamo te-los pelo eslint. e podemos debugar com console.log();
 
+message.content === 'comando' > boolean;
+
+message.author.username > Retorna o nome de usuário!
+message.author.id > Retorna o id do usuário que solicitou!
+
+
+                                    Guild
+
+message.guild.name > Retorna nome do servidor!
+message.guild.memberCount > Retorna o número de pessoas no servidor!
+message.guild.createdAt > Retorna a data que foi criado!
+message.guild.region > Retorna a região onde foi criado!
