@@ -3,7 +3,7 @@ Lista de metódos servidor = https://discord.js.org/#/docs/main/stable/class/Gui
 
 Regras pra colocar no eslint = https://eslint.org/docs/rules/
 
-Regras do eslint são regras que colocamos para melhorar no código, ou seja como o editor de texto não passa esses erros, vamo te-los pelo eslint. e podemos debugar com console.log();
+Regras do eslint são regras que colocamos para melhorar no código, ou seja como o editor de texto não passa esses erros, vamo te-los pelo eslint. e podemos debugarspo com console.log();
 
 message.content === 'comando' > boolean;
 

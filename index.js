@@ -6,7 +6,6 @@ const client = new Discord.Client();
 client.on('message', message =>{
   const userName = message.author.username;
   if(message.content.startsWith(`!play`)){
-    console.log(message.guild.voiceStates)
     if(userName == 'ElliW'){
       message.reply("Isso sim é música boa!");
     } else if(userName == 'luan123'){
