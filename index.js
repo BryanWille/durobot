@@ -34,12 +34,6 @@ client.on('message', message => {
 client.on('message', async message => {
 	const userName = message.author.username;
 	// Join the same voice channel of the author of the message
-	if(message.content == `${prefix}teste`) {
-		if (message.member.voice.channel) {
-			const connection = await message.member.voice.channel.join();
-			console.log(message.member.voice.channel.join())
-		}
-}
 });
 
 client.login(token);
