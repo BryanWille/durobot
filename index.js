@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 
 const client = new Discord.Client();
+const uptime = Discord.Client.uptime;
 
 client.on('ready', () => {
 	console.log("Tô na área!")
@@ -29,11 +30,15 @@ client.on('message', message => {
 	else if (message.content === `${prefix}servidor`) {
 		message.reply(`Servidor **${message.guild.name}** criado em: ${message.guild.createdAt}`);
 	}
+	else if (message.content === `${prefix}canal`){
+		message.reply(`Canal de voz ${message.channel.name} criado em: ${message.channel.createdAt}`)
+	}
 });
 
 client.on('message', async message => {
 	const userName = message.author.username;
-	// Join the same voice channel of the author of the message
+	if(userName === `${prefix}play`) {
+	}
 });
 
 client.login(token);
